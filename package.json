@@ -5,12 +5,25 @@
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "really-smooth-scroll": "^2.1.1"
   },
+  "homepage": "http://inifahmi3.github.io/me",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently --kill-others \"react-scripts start\" \"npm run scss\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "scss": "scss --watch src/assets/scss/app.scss:public/assets/css/app.css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "animejs": "^2.2.0",
+    "concurrently": "^3.5.1",
+    "gh-pages": "^1.1.0",
+    "jquery": "^3.3.1",
+    "jquery.easing": "^1.4.1",
+    "react-scrollspy": "^3.3.5"
   }
 }
