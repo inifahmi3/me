@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from "../Api/API";
 
 class Experience extends Component {
     render() {
@@ -10,20 +11,17 @@ class Experience extends Component {
                         <div className="col-12">
                             <div className="timeline">
                                 <div className="border-vertical"></div>
-                                <div className="list">
-                                    <h4>2010 - 2011</h4>
-                                    <div className="description">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </div>
-                                </div>
-                                <div className="list">
-                                    <h4>2011 - Present</h4>
-                                    <div className="description">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </div>
-                                </div>
+                                {
+                                    API.allExperience().map(p => (
+                                        <div className="list" key={p.id}>
+                                            <h4>{p.year}</h4>
+                                            <div className="description">
+                                                <p>{p.title}</p>
+                                                <span>{p.as}</span>
+                                            </div>
+                                        </div>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>

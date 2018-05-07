@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from "../Api/API";
 
 class Education extends Component {
     render() {
@@ -10,24 +11,16 @@ class Education extends Component {
                         <div className="col-12">
                             <div className="timeline">
                                 <div className="border-vertical"></div>
-                                <div className="list">
-                                    <h4>2010</h4>
-                                    <div className="description">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                    </div>
-                                </div>
-                                <div className="list">
-                                    <h4>2010</h4>
-                                    <div className="description">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                    </div>
-                                </div>
-                                <div className="list">
-                                    <h4>2010</h4>
-                                    <div className="description">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                    </div>
-                                </div>
+                                {
+                                    API.allEducation().map(p => (
+                                        <div className="list" key={p.id}>
+                                            <h4>{p.year}</h4>
+                                            <div className="description">
+                                                <p>{p.title}</p>
+                                            </div>
+                                        </div>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>

@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "moment": "^2.22.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
+    "react-time": "^4.3.0",
     "really-smooth-scroll": "^2.1.1"
   },
   "homepage": "http://inifahmi3.github.io/me",

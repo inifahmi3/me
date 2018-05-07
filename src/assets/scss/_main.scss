@@ -58,7 +58,7 @@ body {
     }
     .header {
         background-color: #45aaf2;
-        height: 100vh; // background-color: #ff6347;
+        height: 100vh;
         h1 {
             margin: 0;
             line-height: 100vh;
@@ -372,11 +372,12 @@ body {
     .backToTop {
         opacity: 0;
         position: fixed;
-        bottom: 0;
-        right: 0;
+        bottom: 10px;
+        right: 10px;
         display: block;
         padding: 8px 16px;
-        color: #333;
+        color: #ffffff;
+        background-color: #333333;
         font-size: 20px;
         transition: .2s;
         z-index: 1100;
